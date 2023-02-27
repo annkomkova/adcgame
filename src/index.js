@@ -64,7 +64,7 @@ function showQuestions(stage) {
 
   function showQuestion(wrapper, question) {
     const element = document.createElement('div')
-    element.innerText = question
+    element.innerHTML = question
     element.classList.add('question')
     wrapper.appendChild(element)
   }

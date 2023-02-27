@@ -133,11 +133,11 @@ const stages = {
       answers: [
         {
           text: 'Дизайнер',
-          stage: 'stage1'
+          stage: 'stage_diz1'
         },
         {
           text: 'Прогер',
-          stage: 'stage1'
+          stage: 'stage_prog1'
         },
         {
           text: '???',
@@ -150,11 +150,11 @@ const stages = {
       answers: [
         {
           text: 'Дизайнер',
-          stage: 'stage1'
+          stage: 'stage_diz1'
         },
         {
           text: 'Прогер',
-          stage: 'stage1'
+          stage: 'stage_prog1'
         },
         {
           text: '???',
@@ -167,11 +167,11 @@ const stages = {
       answers: [
         {
           text: 'Дизайнер',
-          stage: 'stage1'
+          stage: 'stage_diz1'
         },
         {
           text: 'Прогер',
-          stage: 'stage1'
+          stage: 'stage_prog1'
         },
         {
           text: '???',
@@ -184,7 +184,189 @@ const stages = {
     {
       questions: ['Как знаешь', 'Ладно, я добрый, держи стикерпак за честность']
     }
-  ]
+  ],
+//designer quiz
+  stage_diz1: [
+    {
+      questions: ['Ок, давай проверим', 'Что за меню?', '<img src="./burger.png">'],
+      answers: [
+        {
+          text: 'alt burger',
+          stage: 'stage_diz2'
+        },
+        {
+          text: 'cmd burger',
+          stage: 'stage_diz2'
+        },
+        {
+          text: 'ctrl burger',
+          stage: 'stage_diz2'
+        },
+        {
+          text: 'shift burger',
+          stage: 'stage_diz2'
+        }
+      ]
+    }
+  ],
+  stage_diz2: [
+    {
+      questions: ['А это?', '*здесь будет картинка*'],
+      answers: [
+        {
+          text: 'сендвич',
+          stage: 'stage_diz3'
+        },
+        {
+          text: 'гамбургер',
+          stage: 'stage_diz3'
+        },
+        {
+          text: 'шифт',
+          stage: 'stage_diz3'
+        },
+        {
+          text: 'бургер',
+          stage: 'stage_diz3'
+        },
+        {
+          text: 'капкейк',
+          stage: 'stage_diz3'
+        },
+        {
+          text: 'пирожок',
+          stage: 'stage_diz3'
+        }
+      ]
+    }
+  ],
+  stage_diz3: [
+    {
+      questions: ['А это?', '*здесь будет картинка*'],
+      answers: [
+        {
+          text: 'митбол',
+          stage: 'stage_diz4'
+        },
+        {
+          text: 'кебаб',
+          stage: 'stage_diz4'
+        },
+        {
+          text: 'онигири',
+          stage: 'stage_diz4'
+        }
+      ]
+    }
+  ],
+  stage_diz4: [
+    {
+      questions: ['Ещё не проголодался? Тогда давай ещё парочку', '*здесь будет картинка*'],
+      answers: [
+        {
+          text: 'кебаб',
+          stage: 'stage_diz5'
+        },
+        {
+          text: 'митбол(шашлык)',
+          stage: 'stage_diz5'
+        },
+        {
+          text: 'шарики',
+          stage: 'stage_diz5'
+        },
+        {
+          text: 'бенто',
+          stage: 'stage_diz5'
+        }
+      ]
+    }
+  ],
+  stage_diz5: [
+    {
+      questions: ['*здесь будет картинка*'],
+      answers: [
+        {
+          text: 'это что, меню?',
+          stage: 'stage_diz6'
+        },
+        {
+          text: 'онигири',
+          stage: 'stage_diz6'
+        },
+        {
+          text: 'бенто',
+          stage: 'stage_diz6'
+        },
+        {
+          text: 'бенто',
+          stage: 'stage_diz5'
+        }
+      ]
+    }
+  ],
+  stage_diz6: [
+    {
+      questions: ['С меню разобрались, ещё такой вопрос', 'Какого графического формата не существует?'],
+      answers: [
+        {
+          text: '.jpg',
+          stage: 'stage_diz7'
+        },
+        {
+          text: '.svg',
+          stage: 'stage_diz7'
+        },
+        {
+          text: '.tiff',
+          stage: 'stage_diz7'
+        },
+        {
+          text: '.dip',
+          stage: 'stage_diz7'
+        },
+        {
+          text: '.gif',
+          stage: 'stage_diz7'
+        }
+      ]
+    }
+  ],
+  stage_diz7: [
+    {
+      questions: ['Сейчас будет сложнее', 'Что это, иконка или символ?', '*здесь будет иконка. или символ?*'],
+      answers: [
+        {
+          text: 'символ',
+          stage: 'stage_diz_true'
+        },
+        {
+          text: 'иконка',
+          stage: 'stage_diz_false'
+        }
+      ]
+    }
+  ],
+  stage_diz_true: [
+    {
+      questions: ['Ты вау!'],
+      stage: 'stage6'
+    }
+  ],
+  stage_diz_false: [
+    {
+      questions: ['Не, не угадал! Объясню:', 'Правильно: символ. Иконка показывает нам визуальное представление вещи, которая выглядит реалистично по ношению к изображаемому предмету. А символ не обязательно выглядит как то, что он представляет. Иконка иллюстративна, а символ изображает предмет более абстрактно. Сложно представить что-то настолько широкое и абстрактное, как музыка,  фиксированным единым визуальным образом'],
+      stage: 'stage6'
+    }
+  ],
+  stage6: [
+    {
+      questions: ['Молодец! Ты дошёл до конца, а это я дарю тебе набор стикеров!'],
+      stage: 'stage1'
+    }
+  ],
+
+
 }
 
 export { speed, stages }
