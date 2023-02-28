@@ -141,7 +141,7 @@ const stages = {
         },
         {
           text: '???',
-          stage: 'stage1'
+          stage: 'stage_who1'
         }
       ]
     },
@@ -158,7 +158,7 @@ const stages = {
         },
         {
           text: '???',
-          stage: 'stage1'
+          stage: ' stage_who1'
         }
       ]
     },
@@ -175,7 +175,7 @@ const stages = {
         },
         {
           text: '???',
-          stage: 'stage1'
+          stage: 'stage_who1'
         }
       ]
     }
@@ -365,8 +365,137 @@ const stages = {
       stage: 'stage1'
     }
   ],
-
-
+//proger quiz
+  stage_prog1: [
+    {
+      questions: ['Что делать, если не работает код?'],
+      answers: [
+        {
+          text: 'бежать на stackoverflow',
+          stage: 'stage_prog2'
+        },
+        {
+          text: 'спросить маму',
+          stage: 'stage_prog2'
+        },
+        {
+          text: 'спросить папу',
+          stage: 'stage_prog2'
+        }
+      ]
+    }
+  ],
+  stage_prog2: [
+    {
+      questions: ['Мне надоело сидеть в левом углу, помоги мне сгонять в правый угол:'],
+      answers: [
+        {
+          text: 'flex-start',
+          stage: 'stage_prog3'
+        },
+        {
+          text: 'flex-end',
+          stage: 'stage_prog3'
+        },
+        {
+          text: 'space-around',
+          stage: 'stage_prog3'
+        }
+      ]
+    }
+  ],
+  stage_prog3: [
+    {
+      questions: ['Р‘РµР»РёР±РµСЂРґР° РІРјРµСЃС‚Рѕ С‚РµРєСЃС‚Р°, РєРѕРіРґР° СЃР»РµС‚РµРІС€РёР№ UTF'],
+      answers: [
+        {
+          text: 'UTF-8',
+          stage: 'stage_prog4'
+        },
+        {
+          text: 'UTF-16',
+          stage: 'stage_prog3'
+        },
+        {
+          text: 'UTF-32',
+          stage: 'stage_prog3'
+        },
+        {
+          text: 'BOM',
+          stage: 'stage_prog3'
+        }
+      ]
+    }
+  ],
+  stage_prog4: [
+    {
+      questions: ['Спасибо тебе, человек, что поправил мой слетевший юникод! Можем болтать дальше.'],
+      stage: 'stage6'
+    }
+  ],
+//quiz ???
+  stage_who1: [
+  {
+    questions: ['Что было раньше: скетч или фигма?'],
+    answers: [
+        {
+          text: 'скетч',
+          stage: 'stage_who2'
+        },
+        {
+          text: 'фигма',
+          stage: 'stage_who2'
+        }
+      ]
+    }
+  ],
+  stage_who2: [
+  {
+    questions: ['Что было раньше: HTML или Photoshop?'],
+    answers: [
+        {
+          text: 'HTML',
+          stage: 'stage_who3'
+        },
+        {
+          text: 'Photoshop',
+          stage: 'stage_who3'
+        }
+      ]
+    }
+  ],
+  stage_who3: [
+  {
+    questions: ['Что было раньше: GUI или TUI?'],
+    answers: [
+        {
+          text: 'GUI',
+          stage: 'stage_who4'
+        },
+        {
+          text: 'TUI',
+          stage: 'stage_who4'
+        }
+      ]
+    }
+  ],
+  stage_who4: [
+  {
+    questions: ['Я голоден( Покорми меня?', 'А когда я ем, я расту, а ещё я дам тебе подарок за это', 'Если что, питаюсь я  контентом, поэтому поскидывай мне ссылки на что-нибудь интересненькое'],
+    answers: [
+        {
+          text: '*скинуть ссылку*',
+          stage: 'stage_who5'
+        }
+      ]
+    }
+  ],
+  stage_who5: [
+  {
+    questions: ['Держи, я обещал'],
+          stage: 'stage1'
+    }
+  ],
 }
 
 export { speed, stages }
