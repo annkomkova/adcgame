@@ -15,6 +15,18 @@ function showTexting(wrapper) {
   wrapper.appendChild(element)
 }
 
+function showWrong(wrapper) {
+  const parent = document.createElement('div')
+  parent.classList.add('questionsWrapper')
+
+  const element = document.createElement('div')
+  element.classList.add('wrong')
+  element.innerText = 'Не, не так'
+
+  parent.appendChild(element)
+  document.body.appendChild(parent)
+}
+
 function removeTexting() {
   const texting = document.getElementsByClassName('texting')[0]
   texting.remove()
@@ -71,7 +83,7 @@ function showQuestions(stage) {
 
 function showAnswersOrNextStage(stageContent) {
   if (stageContent.answers) {
-    showAnswers(stageContent.answers)
+      showAnswers(stageContent.answers)
   } else {
     showQuestions(stageContent.stage)
   }
@@ -87,7 +99,12 @@ function showAnswers(answers) {
     element.classList.add('answer')
 
     element.addEventListener('click', () => {
+      if (answer.correct == 'false'){
+        showWrong()
+        showQuestions(answer.stage)
+      } else {
       showQuestions(answer.stage)
+    }
     })
 
     wrapper.appendChild(element)

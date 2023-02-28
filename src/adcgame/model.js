@@ -372,15 +372,17 @@ const stages = {
       answers: [
         {
           text: 'бежать на stackoverflow',
-          stage: 'stage_prog2'
+          stage: 'stage_prog2',
         },
         {
           text: 'спросить маму',
-          stage: 'stage_prog2'
+          stage: 'stage_prog1',
+          correct: 'false'
         },
         {
           text: 'спросить папу',
-          stage: 'stage_prog2'
+          stage: 'stage_prog1',
+          correct: 'false'
         }
       ]
     }
@@ -391,15 +393,17 @@ const stages = {
       answers: [
         {
           text: 'flex-start',
-          stage: 'stage_prog3'
+          stage: 'stage_prog2',
+          correct: 'false'
         },
         {
           text: 'flex-end',
-          stage: 'stage_prog3'
+          stage: 'stage_prog3',
         },
         {
           text: 'space-around',
-          stage: 'stage_prog3'
+          stage: 'stage_prog2',
+          correct: 'false'
         }
       ]
     }
@@ -410,19 +414,22 @@ const stages = {
       answers: [
         {
           text: 'UTF-8',
-          stage: 'stage_prog4'
+          stage: 'stage_prog4',
         },
         {
           text: 'UTF-16',
-          stage: 'stage_prog3'
+          stage: 'stage_prog3',
+          correct: 'false'
         },
         {
           text: 'UTF-32',
-          stage: 'stage_prog3'
+          stage: 'stage_prog3',
+          correct: 'false'
         },
         {
           text: 'BOM',
-          stage: 'stage_prog3'
+          stage: 'stage_prog3',
+          correct: 'false'
         }
       ]
     }
@@ -444,7 +451,8 @@ const stages = {
         },
         {
           text: 'фигма',
-          stage: 'stage_who2'
+          stage: 'stage_who1',
+          correct: 'false'
         }
       ]
     }
