@@ -1,12 +1,22 @@
+import imgAlt from '../images/alt.png'
+import imgBurger from '../images/burger.png'
+import imgKebab from '../images/kebab.png'
+import imgMem1 from '../images/mem1.png'
+import imgMitball from '../images/mitball.png'
+import imgOnigiri from '../images/onigiri.png'
+import imgMusic from '../images/music.png'
+import imgStickers from '../images/stickers1.png'
+
+const adc_bubbles = `<a href="https://t.me/addstickers/adc_bubbles" target="_blank"><img src=${imgStickers}></a>`
 const speed = 3000
 
 const stages = {
   stage1: [
     {
       questions: [
-        'Ghbdtn! Rfr ltkf?',
+        'Ghbdtn! Rfr ltkf? &#9728;',
         'Ой',
-        'Привет! Как дела?',
+        'Привет! Как дела? &#9728;',
         'Ладно, знаешь меня?'
       ],
       answers: [
@@ -104,12 +114,12 @@ const stages = {
       questions: ['Ого, ну ничего себе! Точно хочу узнать тебя поближе'],
       answers: [
         {
-          text: 'Я сегодня не в настроении(',
-          stage: 'stage5'
-        },
-        {
           text: 'Ок',
           stage: 'stage4'
+        },
+        {
+          text: 'Я сегодня не в настроении(',
+          stage: 'stage5'
         }
       ]
     },
@@ -117,12 +127,12 @@ const stages = {
       questions: ['Вау! Круто! Мама, я знаменитость'],
       answers: [
         {
-          text: 'Я сегодня не в настроении(',
-          stage: 'stage5'
-        },
-        {
           text: 'Ок',
           stage: 'stage4'
+        },
+        {
+          text: 'Я сегодня не в настроении(',
+          stage: 'stage5'
         }
       ]
     }
@@ -141,7 +151,7 @@ const stages = {
         },
         {
           text: '???',
-          stage: 'stage_who1'
+          stage: 'stage_who'
         }
       ]
     },
@@ -158,7 +168,7 @@ const stages = {
         },
         {
           text: '???',
-          stage: ' stage_who1'
+          stage: 'stage_who'
         }
       ]
     },
@@ -175,20 +185,20 @@ const stages = {
         },
         {
           text: '???',
-          stage: 'stage_who1'
+          stage: 'stage_who'
         }
       ]
     }
   ],
   stage5: [
     {
-      questions: ['Как знаешь', 'Ладно, я добрый, держи стикерпак за честность']
+      questions: ['Как знаешь', 'Ладно, я добрый, держи стикерпак за честность', adc_bubbles]
     }
   ],
 //designer quiz
   stage_diz1: [
     {
-      questions: ['Ок, давай проверим', 'Что за меню?', '<img src="./burger.png">'],
+      questions: ['Ок, давай проверим', 'Что за меню?', `<img src=${imgAlt}>`],
       answers: [
         {
           text: 'alt burger',
@@ -196,34 +206,40 @@ const stages = {
         },
         {
           text: 'cmd burger',
-          stage: 'stage_diz2'
+          stage: 'stage_diz1',
+          correct: 'false'
         },
         {
           text: 'ctrl burger',
-          stage: 'stage_diz2'
+          stage: 'stage_diz1',
+          correct: 'false'
         },
         {
           text: 'shift burger',
-          stage: 'stage_diz2'
+          stage: 'stage_diz1',
+          correct: 'false'
         }
       ]
     }
   ],
   stage_diz2: [
     {
-      questions: ['А это?', '*здесь будет картинка*'],
+      questions: ['А это?', `<img src=${imgBurger}>`],
       answers: [
         {
           text: 'сендвич',
-          stage: 'stage_diz3'
+          stage: 'stage_diz2',
+          correct: 'false'
         },
         {
           text: 'гамбургер',
-          stage: 'stage_diz3'
+          stage: 'stage_diz3',
+          correct: 'false'
         },
         {
           text: 'шифт',
-          stage: 'stage_diz3'
+          stage: 'stage_diz2',
+          correct: 'false'
         },
         {
           text: 'бургер',
@@ -231,22 +247,25 @@ const stages = {
         },
         {
           text: 'капкейк',
-          stage: 'stage_diz3'
+          stage: 'stage_diz2',
+          correct: 'false'
         },
         {
           text: 'пирожок',
-          stage: 'stage_diz3'
+          stage: 'stage_diz2',
+          correct: 'false'
         }
       ]
     }
   ],
   stage_diz3: [
     {
-      questions: ['А это?', '*здесь будет картинка*'],
+      questions: ['А это?', `<img src=${imgKebab}>`],
       answers: [
         {
           text: 'митбол',
-          stage: 'stage_diz4'
+          stage: 'stage_diz3',
+          correct: 'false'
         },
         {
           text: 'кебаб',
@@ -254,18 +273,20 @@ const stages = {
         },
         {
           text: 'онигири',
-          stage: 'stage_diz4'
+          stage: 'stage_diz3',
+          correct: 'false'
         }
       ]
     }
   ],
   stage_diz4: [
     {
-      questions: ['Ещё не проголодался? Тогда давай ещё парочку', '*здесь будет картинка*'],
+      questions: ['Ещё не проголодался? Тогда давай ещё парочку', `<img src=${imgMitball}>`],
       answers: [
         {
           text: 'кебаб',
-          stage: 'stage_diz5'
+          stage: 'stage_diz4',
+          correct: 'false'
         },
         {
           text: 'митбол(шашлык)',
@@ -273,18 +294,20 @@ const stages = {
         },
         {
           text: 'шарики',
-          stage: 'stage_diz5'
+          stage: 'stage_diz4',
+          correct: 'false'
         },
         {
           text: 'бенто',
-          stage: 'stage_diz5'
+          stage: 'stage_diz4',
+          correct: 'false'
         }
       ]
     }
   ],
   stage_diz5: [
     {
-      questions: ['*здесь будет картинка*'],
+      questions: [`<img src=${imgOnigiri}>`],
       answers: [
         {
           text: 'это что, меню?',
@@ -297,10 +320,6 @@ const stages = {
         {
           text: 'бенто',
           stage: 'stage_diz6'
-        },
-        {
-          text: 'бенто',
-          stage: 'stage_diz5'
         }
       ]
     }
@@ -311,15 +330,18 @@ const stages = {
       answers: [
         {
           text: '.jpg',
-          stage: 'stage_diz7'
+          stage: 'stage_diz6',
+          correct: 'false'
         },
         {
           text: '.svg',
-          stage: 'stage_diz7'
+          stage: 'stage_diz6',
+          correct: 'false'
         },
         {
           text: '.tiff',
-          stage: 'stage_diz7'
+          stage: 'stage_diz6',
+          correct: 'false'
         },
         {
           text: '.dip',
@@ -327,14 +349,15 @@ const stages = {
         },
         {
           text: '.gif',
-          stage: 'stage_diz7'
+          stage: 'stage_diz6',
+          correct: 'false'
         }
       ]
     }
   ],
   stage_diz7: [
     {
-      questions: ['Сейчас будет сложнее', 'Что это, иконка или символ?', '*здесь будет иконка. или символ?*'],
+      questions: ['Сейчас будет сложнее', 'Что это, иконка или символ?', `<img src=${imgMusic}>`],
       answers: [
         {
           text: 'символ',
@@ -361,7 +384,7 @@ const stages = {
   ],
   stage6: [
     {
-      questions: ['Молодец! Ты дошёл до конца, а это я дарю тебе набор стикеров!'],
+      questions: ['Молодец! Ты дошёл до конца, а это я дарю тебе набор стикеров!', adc_bubbles],
       stage: 'stage_media'
     }
   ],
@@ -441,6 +464,12 @@ const stages = {
     }
   ],
 //quiz ???
+  stage_who: [
+  {
+    questions: [`<img src=${imgMem1}>`],
+    stage: 'stage_who1'
+    }
+  ],
   stage_who1: [
   {
     questions: ['Что было раньше: скетч или фигма?'],
@@ -711,4 +740,11 @@ const stages = {
   ]
 }
 
-export { speed, stages }
+const wrong = [
+  'Нет, не так',
+  'А вот и не угадал!',
+  'Попробуй ещё раз',
+  'НепРаВилЬнО! &#x2600; &#9733; &#9732;'
+]
+
+export { speed, stages, wrong }

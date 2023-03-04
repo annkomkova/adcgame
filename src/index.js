@@ -1,6 +1,6 @@
 import './index.css'
 
-import { speed, stages } from './adcgame/model.js'
+import { speed, stages, wrong } from './adcgame/model.js'
 
 //функция рандома
 function sample(array) {
@@ -15,13 +15,15 @@ function showTexting(wrapper) {
   wrapper.appendChild(element)
 }
 
-function showWrong(wrapper) {
+function showWrong() {
   const parent = document.createElement('div')
   parent.classList.add('questionsWrapper')
 
+
+  const wrongContent = sample(wrong)
   const element = document.createElement('div')
   element.classList.add('wrong')
-  element.innerText = 'Не, не так'
+  element.innerText = wrongContent
 
   parent.appendChild(element)
   document.body.appendChild(parent)
@@ -101,6 +103,10 @@ function showAnswers(answers) {
     element.addEventListener('click', () => {
       if (answer.correct == 'false'){
         showWrong()
+        document.body.style = 'background-color: #FF3951'
+        setTimeout(() => {
+          document.body.style = 'background-color: #79ff39'
+        }, 1000);
         showQuestions(answer.stage)
       } else {
       showQuestions(answer.stage)
