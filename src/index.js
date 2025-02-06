@@ -122,3 +122,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   showQuestions('stage1')
 })
+
+import { getLinkPreview, getPreviewFromContent } from "link-preview-js";
+
+// pass the link directly
+getLinkPreview("https://www.youtube.com/watch?v=MejbOFk7H6c").then((data) =>
+  console.debug(data)
+);
+
+////////////////////////// OR //////////////////////////
+
+// pass a chunk of text
+getLinkPreview(
+  "This is a text supposed to be parsed and the first link displayed https://www.youtube.com/watch?v=MejbOFk7H6c"
+).then((data) => console.debug(data));
+
+////////////////////////// OR //////////////////////////
+
+// pass a pre-fetched response object
+// The passed response object should include, at minimum:
+// {
+//   data: '<!DOCTYPE...><html>...',     // response content
+//   headers: {
+//     ...
+//     // should include content-type
+//     content-type: "text/html; charset=ISO-8859-1",
+//     ...
+//   },
+//   url: 'https://domain.com/'          // resolved url
+// }
+yourAjaxCall(url, (response) => {
+  getPreviewFromContent(response).then((data) => console.debug(data));
+});
